@@ -1,12 +1,23 @@
-terraform {
+# terraform {
   #required_version = "~> 0.12"
-  backend "remote" {
-    hostname     = "app.terraform.io"
-    organization = "terragitactions"
-    workspaces  { prefix =  "network-" }
+#  backend "remote" {
+#    hostname     = "app.terraform.io"
+#    organization = "terragitactions"
+#    workspaces  { prefix =  "network-" }
+ # }
+#}
 
+terraform {
+  cloud {
+    organization = "terragitactions"
+
+    workspaces {
+      name = "network-sg"
+    }
   }
 }
+
+
 
 provider "aws" {
   region = "ap-south-1"
