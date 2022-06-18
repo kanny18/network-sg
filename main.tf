@@ -15,7 +15,7 @@ provider "aws" {
 module "http_sg" {
   source = "github.com/nitheesh86/terraform-modules/modules/sg"
 
-  name        = "computed-http-sg"
+  name        = "http-sg"
   description = "Security group with HTTP port open for everyone, and HTTPS open just for the default security group"
   vpc_id      = vpc-0bcfc7dacc703ade8
 
