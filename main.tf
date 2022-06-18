@@ -3,9 +3,7 @@ terraform {
   backend "remote" {
     hostname     = "app.terraform.io"
     organization = "terragitactions"
-    workspaces  { 
-   name =  "network-sg" 
-}
+    workspaces  { prefix =  "network-" }
 
   }
 }
