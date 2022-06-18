@@ -34,7 +34,7 @@ jobs:
       - name: Terraform Plan
         id: plan
         run: |
-          export TF_WORKSPACE="dev"
+          export TF_WORKSPACE="sg"
           terraform plan -input=false
         continue-on-error: true
 
