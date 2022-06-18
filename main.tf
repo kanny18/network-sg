@@ -19,7 +19,7 @@ module "http_sg" {
   source = "github.com/nitheesh86/terraform-modules/modules/sg"
 
   name        = "http-sg"
-  description = "Security  HTTP port open for everyone, and HTTPS open just for the default security group"
+  description = "Security gorup  HTTP port open for everyone, and HTTPS open just for the default security group"
   vpc_id      = vpc-0e6620fb48a4eefb7
 
   ingress_cidr_blocks = ["0.0.0.0/0"]
