@@ -26,7 +26,7 @@ jobs:
       - name: Terraform Init
         id: init
         run: |
-          export TF_WORKSPACE="sg"
+          export TF_WORKSPACE="network-sg"
           terraform init -input=false
           terraform workspace show
       
@@ -34,7 +34,7 @@ jobs:
       - name: Terraform Plan
         id: plan
         run: |
-          export TF_WORKSPACE="sg"
+          export TF_WORKSPACE="network-sg"
           terraform plan -input=false
         continue-on-error: true
 
